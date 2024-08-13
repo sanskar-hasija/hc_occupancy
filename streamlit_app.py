@@ -36,23 +36,12 @@ max_bookings = st.slider(
         max_value=int(zmax),
         value = 50
     )
-min_bookings = st.slider(
-        'Select Max Occupancy for Color Range',
-        min_value=int(zmin),
-        max_value= 5,
-        value = -2
-    )
 zmax = max_bookings
-zmin = min_bookings
-print(zmax)
-diff_mid_val = 0  
+zmin = 0
 zero_position = abs(zmin) / (zmax - zmin)
 
 custom_colorscale = [
-    [0, 'blue'],     
-    [zero_position / 2, 'lightblue'],        
-    [zero_position, 'white'],  
-    [zero_position + (1 - zero_position) / 2, '#FFCCCB'],      
+    [0, 'white'],           
     [1, 'red']            
 ]
 
